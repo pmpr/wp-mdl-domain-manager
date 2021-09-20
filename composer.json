@@ -1,0 +1,24 @@
+{
+  "name": "pmpr/wp-pkg-domain-manager",
+  "type": "project",
+  "license": "proprietary",
+  "description": "Domain Manager Package for Wordpress",
+  "keywords": [
+    "optimization-manager",
+    "wordpress",
+    "package"
+  ],
+  "require": {
+    "php": ">=7.4",
+    "pmpr/wp-cmn-foundation": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "Pmpr\\Package\\DomainManager\\": "src/Pmpr/Package/DomainManager"
+    },
+    "files": [
+      "index.php"
+    ]
+  },
+  "minimum-stability": "dev"
+}
