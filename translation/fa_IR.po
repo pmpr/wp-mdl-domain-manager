@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PMPR Domain Manager\n"
-"POT-Creation-Date: 2021-07-02 14:53+0430\n"
-"PO-Revision-Date: 2021-07-02 14:53+0430\n"
-"Last-Translator: Farshadi <Farshad_asgharzade@hotmail.com>\n"
+"POT-Creation-Date: 2021-10-08 16:01+0330\n"
+"PO-Revision-Date: 2021-10-08 16:01+0330\n"
+"Last-Translator:  Farshad Asgharzade <Farshad_asgharzade@hotmail.com>\n"
 "Language-Team: \n"
 "Language: fa_IR\n"
 "MIME-Version: 1.0\n"
@@ -22,275 +22,479 @@ msgstr ""
 "X-Poedit-SearchPathExcluded-0: lib\n"
 "X-Poedit-SearchPathExcluded-1: *.js\n"
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:35
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:28
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:57
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:68
-#: src/Pmpr/Package/DomainManager/Model/Ownership.php:111
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:64
+msgid "Backlink Config"
+msgstr "پیکربندی بک لینک"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:68
+msgid "General"
+msgstr "عمومی"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:70
+#: src/Pmpr/Package/DomainManager/Backlink/Model.php:36
+msgid "Backlink"
+msgstr "بک لینک"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:76
+msgid "Contents"
+msgstr "محتواها"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:80
+msgid "Title And Slug"
+msgstr "عنوان و نامک"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:84
+msgid "Title and Slug Places"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:89
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:93
+#: src/Pmpr/Package/DomainManager/Backlink/Model.php:75
+msgid "Title"
+msgstr "عنوان"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:98
+#: src/Pmpr/Package/DomainManager/Backlink/Model.php:78
+msgid "Slug"
+msgstr "نامک"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:103
+msgid "Place"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:108
+msgid "Place Length"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:115
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:123
+msgid "Anchors"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:117
+msgid "Anchor Prefix"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:119
+msgid "Anchor Suffix"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:127
+msgid "Anchor"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:134
+msgid "Statements"
+msgstr "جملات"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:138
+msgid "Minimum Count"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:139
+msgid "Minimum paragraph count"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:144
+msgid "Maximum Count"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:145
+msgid "Maximum paragraph count"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:150
+msgid "Minimum Length"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:151
+msgid "Minimum statement count used in each paragraph"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:156
+msgid "Maximum Length"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:157
+msgid "Maximum statement count used in each paragraph"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:162
+msgid "Statement"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:166
+msgid "Text"
+msgstr "متن"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Backlink.php:171
+msgid "Which Paragraph"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/Model.php:35
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:78
+msgid "Backlinks"
+msgstr "بک لینک‌ها"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Model.php:81
+msgid "Content"
+msgstr "محتوا"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Model.php:84
+msgid "Expire Date"
+msgstr "تاریخ انقراض"
+
+#: src/Pmpr/Package/DomainManager/Backlink/Model.php:88
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:42
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:157
+#: src/Pmpr/Package/DomainManager/Model/RelatedModel.php:26
+#: src/Pmpr/Package/DomainManager/Model/RelatedModel.php:49
+#: src/Pmpr/Package/DomainManager/Model/RelatedModel.php:60
 msgid "Domain"
 msgstr "دامنه"
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:36
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:29
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:59
+#: src/Pmpr/Package/DomainManager/Backlink/Model.php:92
+msgid "Component"
+msgstr "کامپوننت"
+
+#: src/Pmpr/Package/DomainManager/Backlink/REST.php:69
+msgid "Data generated successfully."
+msgstr "داده‌ها با موفقیت ایجاد شدند."
+
+#: src/Pmpr/Package/DomainManager/Backlink/REST.php:72
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:299
+msgid "Please try again"
+msgstr "لطفا مجدد تلاش کنید"
+
+#: src/Pmpr/Package/DomainManager/Backlink/REST.php:76
+msgid "Can not generate page data."
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Backlink/REST.php:80
+#, fuzzy
+#| msgid "Requested domain not found."
+msgid "Requested package not found."
+msgstr "دامنه درخواستی یافت نشد."
+
+#: src/Pmpr/Package/DomainManager/Backlink/REST.php:84
+msgid "Require parameters missing."
+msgstr "پارامتر‌های ضروری یافت نشد."
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:43
+#: src/Pmpr/Package/DomainManager/Model/RelatedModel.php:27
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:42
 msgid "Domains"
 msgstr "دامنه‌ها"
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:49
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:59
 msgid "Domain Name"
 msgstr "نام دامنه"
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:53
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:63
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:113
 msgid "API Key"
 msgstr "کلید وب‌سرویس"
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:56
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:67
+msgid "Status"
+msgstr "وضعیت"
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:70
 msgid "Domain Address"
 msgstr "آدرس دامنه"
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:60
-#: src/Pmpr/Package/DomainManager/Model/Ownership.php:35
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:74
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:37
 msgid "Ownerships"
 msgstr "مالکیت‌ها"
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:161
-msgid "Domain successfully updated."
-msgstr "دامنه با موفقیت به روز شد."
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:82
+msgid "Purchases"
+msgstr "خرید‌ها"
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:171
-msgid "You dont have permission to edit this domain."
-msgstr "شما دسترسی لازم برای ویرایش این دامنه را ندارید."
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:114
+msgid "Active"
+msgstr "فعال"
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:175
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:267
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:115
+msgid "Violated"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:116
+msgid "Blocked"
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:185
+msgid "Domain successfully added."
+msgstr "دامنه با موفقیت ثبت شد."
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:186
+msgid "Please verify domain."
+msgstr "لطفا عملیات تایید مالکیت دامنه را انجام دهید."
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:192
+msgid "This domain already exist in your domains."
+msgstr "این دامنه در حال حاضر در لیست دامنه‌های شما موجود است."
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:200
+msgid "Entered domain is not valid."
+msgstr "دامنه اینترنتی که وارد کرده‌اید معتبر نیست."
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:204
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:285
 msgid "Required fields not passed."
 msgstr "فیلد‌های ضروری ارائه نشده اند."
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:226
-msgid "This domain already added by someone else."
-msgstr "این دامنه‌ پیش از این توسط شخص دیگری گرفته شده است."
-
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:235
-msgid "This domain already added by you."
-msgstr "این دامنه پیش از این توسط شما اضافه شده است."
-
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:248
-msgid "Domain successfully added, please verify domain."
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:267
+msgid "Sorry you can not update your domain address."
 msgstr ""
-"دامنه مورد نظر با موفقیت ثبت شد، لطفا عملیات تایید مالکیت را انجام دهید."
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:253
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:281
+msgid "You dont have permission to edit this domain."
+msgstr "شما دسترسی لازم برای ویرایش این دامنه را ندارید."
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:404
+#, fuzzy
+#| msgid "Entered url is not valid."
+msgid "Your API Key is not valid."
+msgstr "پیوندی که وارد کرده‌اید معتبر نیست."
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:425
+msgid "API Key is valid."
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:428
+msgid "Can not found domain, please get and api key by guide."
+msgstr ""
+
+#: src/Pmpr/Package/DomainManager/Model/Domain.php:433
+#, fuzzy
+#| msgid "Requested domain not found."
+msgid "Request origin not detected."
+msgstr "دامنه درخواستی یافت نشد."
+
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:36
+msgid "Ownership"
+msgstr "مالکیت"
+
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:67
+msgid "Owner Capability"
+msgstr "مالک دامنه"
+
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:68
+msgid "Restrict Capability"
+msgstr "دسترسی محدود"
+
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:69
+msgid "Unverified"
+msgstr "احراز مالکیت نشده"
+
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:121
 #, php-format
 msgid "Something is wrong, please try again: %s"
 msgstr "مشکلی پیش آمده است، لطفا دوباره تلاش کنید: %s"
 
-#: src/Pmpr/Package/DomainManager/Model/Domain.php:263
-msgid "Entered url is not valid."
-msgstr "پیوندی که وارد کرده‌اید معتبر نیست."
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:126
+msgid "Domain and user is require"
+msgstr ""
 
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:47
-msgid "Status"
-msgstr "وضعیت"
-
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:50
-msgid "Domain Privilege"
-msgstr "امتیاز دامنه"
-
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:53
-msgid "Backlink Page"
-msgstr "صفحه بک لینک"
-
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:107
-msgid "Active"
-msgstr "فعال"
-
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:108
-msgid "Inactive"
-msgstr "غیر فعال"
-
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:109
-#: src/Pmpr/Package/DomainManager/Model/Ownership.php:66
-msgid "Unverified"
-msgstr "احراز مالکیت نشده"
-
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:191
-#: src/Pmpr/Package/DomainManager/Model/Ownership.php:95
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:141
+#: src/Pmpr/Package/DomainManager/Model/RelatedModel.php:128
 msgid "User"
 msgstr "کاربر"
 
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:192
-#: src/Pmpr/Package/DomainManager/Model/Ownership.php:106
-msgid "Capability"
-msgstr "دسترسی"
-
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:198
-msgid "No ownership has been registered for this domain yet."
-msgstr "هنوز مالکیتی برای این دامنه ثبت نشده است."
-
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:247
-msgid "Not Privileged Domain"
-msgstr "دامنه غیر خاص"
-
-#: src/Pmpr/Package/DomainManager/Model/DomainChild.php:252
-msgid "Privileged Domain"
-msgstr "دامنه خاص"
-
-#: src/Pmpr/Package/DomainManager/Model/Ownership.php:34
-msgid "Ownership"
-msgstr "مالکیت"
-
-#: src/Pmpr/Package/DomainManager/Model/Ownership.php:64
-msgid "Owner Capability"
-msgstr "مالک دامنه"
-
-#: src/Pmpr/Package/DomainManager/Model/Ownership.php:65
-msgid "Restrict Capability"
-msgstr "دسترسی محدود"
-
-#: src/Pmpr/Package/DomainManager/Model/Ownership.php:99
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:145
 msgid "Verification Key"
 msgstr "کلید تایید مالکیت"
 
-#: src/Pmpr/Package/DomainManager/Model/Ownership.php:103
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:149
 msgid "Verify Date"
 msgstr "تاریح احراز مالکیت"
 
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:33
-msgid "Upload An HTML file to your website"
-msgstr "فایل HTML را در وب سایت خود بارگذاری کنید"
+#: src/Pmpr/Package/DomainManager/Model/Ownership.php:152
+#: src/Pmpr/Package/DomainManager/Model/RelatedModel.php:129
+msgid "Capability"
+msgstr "دسترسی"
 
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:34
-msgid "To Stay verified, dont remove the file, event after verification."
-msgstr "لطفا بعد از تایید مالکیت فایل را پاک نکنید."
+#: src/Pmpr/Package/DomainManager/Model/RelatedModel.php:45
+msgid "Domain Privilege"
+msgstr "امتیاز دامنه"
 
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:36
-msgid "Download the File"
-msgstr "فایل را دانلود کنید"
+#: src/Pmpr/Package/DomainManager/Model/RelatedModel.php:135
+msgid "No ownership has been registered for this domain yet."
+msgstr "هنوز مالکیتی برای این دامنه ثبت نشده است."
 
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:37
-msgid "Upload file to your host on"
-msgstr "فایل را در مسیر میزبانی وب در مسیر اصلی دامنه آپلود کنید"
+#: src/Pmpr/Package/DomainManager/Model/RelatedModel.php:200
+msgid "Not Privileged Domain"
+msgstr "دامنه غیر خاص"
 
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:38
-msgid "Click on button to start verify process"
-msgstr "روی دکمه مقابل کلیک کیند تا فرایند احراز مالکیت آغاز شود"
+#: src/Pmpr/Package/DomainManager/Model/RelatedModel.php:205
+msgid "Privileged Domain"
+msgstr "دامنه خاص"
 
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:40
-msgid "Verify Check"
-msgstr "بررسی مالکیت"
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:127
+msgid "Domain successfully updated."
+msgstr "دامنه با موفقیت به روز شد."
 
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:41
-#, php-format
-msgid "This domain already verified by %s on %s."
-msgstr "این دامنه توسط %s در تاریخ %s تایید شده است."
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:42
-msgid "You have not permission to verify domain."
-msgstr "شما دسترسی لازم برای تایید مالکیت این دامنه را ندارید."
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:66
-msgid "Domains List"
-msgstr "لیست دامنه‌ها"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:68
-msgid "Manage your domains"
-msgstr "مدیریت دامنه‌های شما"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:76
-msgid "Add Domain"
-msgstr "افزودن دامنه"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:77
-msgid "Add New Domain"
-msgstr "افزودن دامنه جدید"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:86
-msgid "Show Domain"
-msgstr "نمایش دامنه"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:87
-msgid "Show Your Domain"
-msgstr "نمایش دامنه شما"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:93
-msgid "Edit Domain"
-msgstr "ویرایش دامنه"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:94
-msgid "Edit Your Domain"
-msgstr "ویرایش دامنه شما"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:101
-msgid "Domain Users"
-msgstr "کاربران دامنه"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:102
-msgid "List of user can access to this domain"
-msgstr "لیست کاربرانی که به این دامنه دسترسی دارند"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:109
-msgid "Verification"
-msgstr "احراز مالکیت"
-
-#: src/Pmpr/Package/DomainManager/Panel/Panel.php:110
-msgid "Verify ownership of domain"
-msgstr "تایید مالکیت دامنه"
-
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:108
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:178
 msgid "No access to this segment"
 msgstr "به این بخش دسترسی ندارید"
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:129
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:274
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:199
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:329
 msgid "Ownership not found"
 msgstr "مالکیت یافت نشد"
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:176
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:247
 msgid "Requested domain not found."
 msgstr "دامنه درخواستی یافت نشد."
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:239
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:294
 msgid "Domain Verified successfully."
 msgstr "مالکیت دامنه با موفقیت تایید شد."
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:244
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:251
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:259
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:298
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:304
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:317
 #, php-format
 msgid "Verify Failed: %s"
 msgstr "تایید مالکیت شکست خورد: %s"
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:245
-msgid "Please try again"
-msgstr "لطفا مجدد تلاش کنید"
-
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:252
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:305
 msgid "File content not valid"
 msgstr "محتوای فایل معتبر نیست"
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:260
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:315
 msgid "Can not find file"
 msgstr "فایل موجود نیست"
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:266
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:321
 msgid "Require parameters not found"
 msgstr "پارامتر‌های ضروری یافت نشد"
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:270
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:325
 msgid "Domain not found"
 msgstr "دامنه یافت نشد"
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:305
-msgid "Name"
-msgstr "نام"
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:345
+msgid "Site or Store Name"
+msgstr "نام سایت یا فروشگاه"
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:310
-msgid "URL"
-msgstr "آدرس سایت"
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:349
+msgid "Internet Domain"
+msgstr "دامنه اینترنتی"
 
-#: src/Pmpr/Package/DomainManager/Panel/REST.php:311
+#: src/Pmpr/Package/DomainManager/Panel/Controller.php:350
 msgid "Enter your domain without http and www"
 msgstr "لطفا دامنه خود را بدون http و www وارد کنید"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:49
+msgid "Domains List"
+msgstr "لیست دامنه‌ها"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:51
+msgid "Manage your domains"
+msgstr "مدیریت دامنه‌های شما"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:59
+msgid "Add Domain"
+msgstr "افزودن دامنه"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:60
+msgid "Add New Domain"
+msgstr "افزودن دامنه جدید"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:69
+msgid "Show Domain"
+msgstr "نمایش دامنه"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:70
+msgid "Show Your Domain"
+msgstr "نمایش دامنه شما"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:76
+msgid "Edit Domain"
+msgstr "ویرایش دامنه"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:77
+msgid "Edit Your Domain"
+msgstr "ویرایش دامنه شما"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:84
+msgid "Domain Users"
+msgstr "کاربران دامنه"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:85
+msgid "List of user can access to this domain"
+msgstr "لیست کاربرانی که به این دامنه دسترسی دارند"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:92
+msgid "Verification"
+msgstr "احراز مالکیت"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:93
+msgid "Steps of Verify domain's ownership"
+msgstr "مراحل احراز مالکیت دامنه اینترنتی"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:106
+msgid "Upload An HTML file to your website"
+msgstr "فایل HTML را در وب سایت خود بارگذاری کنید"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:107
+msgid "To Stay verified, dont remove the file, event after verification."
+msgstr ""
+"لطفا پس از احراز مالکیت دامنه، این فایل را به هیچ وجه از سایت خود حذف نکنید."
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:109
+msgid "Download the File"
+msgstr "فایل را دانلود کنید"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:110
+#, php-format
+msgid "Upload file on main path of %s"
+msgstr "فایل را در سرور سایت خود و در مسیر اصلی دامنه %s بارگذاری کنید"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:111
+msgid "Click on button to start verify process"
+msgstr "روی دکمه مقابل کلیک کنید تا فرایند احراز مالکیت آغاز شود"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:114
+msgid "Verify Domain Ownership"
+msgstr "احراز مالکیت دامنه"
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:115
+#, php-format
+msgid "This domain already verified by %s on %s."
+msgstr "این دامنه توسط %s در تاریخ %s تایید شده است."
+
+#: src/Pmpr/Package/DomainManager/Panel/Panel.php:116
+msgid "You have not permission to verify domain."
+msgstr "شما دسترسی لازم برای تایید مالکیت این دامنه را ندارید."
+
+#~ msgid "Verify Check"
+#~ msgstr "بررسی مالکیت"
+
+#~ msgid "Verify ownership of domain"
+#~ msgstr "تایید مالکیت دامنه"
+
+#~ msgid "Domain successfully added, please verify domain."
+#~ msgstr ""
+#~ "دامنه مورد نظر با موفقیت ثبت شد، لطفا عملیات تایید مالکیت را انجام دهید."
+
+#~ msgid "This domain already added by someone else."
+#~ msgstr "این دامنه‌ پیش از این توسط شخص دیگری گرفته شده است."
+
+#~ msgid "This domain already added by you."
+#~ msgstr "این دامنه پیش از این توسط شما اضافه شده است."
+
+#~ msgid "Inactive"
+#~ msgstr "غیر فعال"
+
+#~ msgid "Name"
+#~ msgstr "نام"
+
+#~ msgid "URL"
+#~ msgstr "آدرس سایت"
 
 #~ msgid "Upload to"
 #~ msgstr "در این دامنه آپلود کنید"

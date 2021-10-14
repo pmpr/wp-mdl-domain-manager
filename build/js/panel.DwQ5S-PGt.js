@@ -133,13 +133,15 @@ const actions = {
         return new Promise((resolve, reject) => {
 
             this._vm.$api.$setToken(this._vm.$jwt.$getToken());
-            this._vm.$api.$post(`${API_PREFIX}/save-domain`, payload).then((response) => {
+            this._vm.$api.$post(`${API_PREFIX}/save-domain`, payload)
+                .then((response) => {
 
-                resolve(response.data);
-            }).catch(({response}) => {
+                    resolve(response.data);
+                })
+                .catch((result) => {
 
-                reject(response);
-            });
+                    reject(result.response);
+                });
         });
     },
     [UPDATE_DOMAIN]({commit, state}, payload) {
@@ -201,7 +203,7 @@ render._withStripped = true
 //
 
 /* harmony default export */ const Domainvue_type_script_lang_js_ = ({
-  name: "PanelDomain",
+  name: 'PanelDomain',
 });
 
 ;// CONCATENATED MODULE: ./asset/js/panel/view/Domain.vue?vue&type=script&lang=js&
@@ -335,11 +337,7 @@ var Addvue_type_template_id_68cc1f48_render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("PanelCardForm", {
-    ref: "add_new_domain",
-    attrs: {
-      title: _vm.currentRouteTitle(),
-      description: _vm.currentRouteDescription()
-    },
+    attrs: { form: "add_new_domain" },
     scopedSlots: _vm._u([
       {
         key: "toolbar",
@@ -350,12 +348,7 @@ var Addvue_type_template_id_68cc1f48_render = function() {
               {
                 ref: "save_changes",
                 staticClass: "btn btn-success",
-                attrs: { type: "submit" },
-                on: {
-                  click: function($event) {
-                    return _vm.save()
-                  }
-                }
+                attrs: { type: "submit", form: "add_new_domain" }
               },
               [
                 _vm._v(
@@ -389,52 +382,10 @@ var Addvue_type_template_id_68cc1f48_render = function() {
         key: "form",
         fn: function() {
           return [
-            _vm._l(_vm.fields, function(field) {
-              return [
-                field.component === "PanelTextInput"
-                  ? _c("PanelTextInput", {
-                      ref: field.id,
-                      refInFor: true,
-                      attrs: {
-                        attrs: field.attributes,
-                        desc: field.desc,
-                        label: { text: field.label, class: "text-lg-right" },
-                        size: "lg",
-                        solid: true,
-                        inline: {
-                          input: { lg: 9, xl: 6 },
-                          label: { lg: 3, xl: 3 }
-                        }
-                      },
-                      scopedSlots: _vm._u(
-                        [
-                          field.icon
-                            ? {
-                                key: "prepend",
-                                fn: function() {
-                                  return [
-                                    _c(
-                                      "span",
-                                      { staticClass: "svg-icon svg-icon-md" },
-                                      [
-                                        _c("inline-svg", {
-                                          attrs: { src: field.icon }
-                                        })
-                                      ],
-                                      1
-                                    )
-                                  ]
-                                },
-                                proxy: true
-                              }
-                            : null
-                        ],
-                        null,
-                        true
-                      )
-                    })
-                  : _vm._e()
-              ]
+            _c("PanelFormInput", {
+              ref: "fields",
+              attrs: { fields: _vm.fields },
+              on: { rendered: _vm.afterRender }
             })
           ]
         },
@@ -470,50 +421,49 @@ Addvue_type_template_id_68cc1f48_render._withStripped = true
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
 /* harmony default export */ const Addvue_type_script_lang_js_ = ({
-  name: "PanelDomainAdd",
-
+  name: 'PanelDomainAdd',
   data() {
     return {
       fields: {},
     };
   },
+  beforeMount() {
+    this.$store.dispatch(FETCH_FIELDS, {
+      context: 'add'
+    }).then((fields) => {
+      this.fields = fields;
+    });
+  },
   methods: {
-    save() {
-      this.$helper.$saveForm(this, this.fields, {}, SAVE_DOMAIN)
-          .then(({modal, response}) => {
-            modal.then((result) => {
-              if (result.isConfirmed) {
+    afterRender() {
+      this.$helper.$onSubmitForm(
+          this, 'add_new_domain', this.fields,
+          () => {
 
-                this.$router.push({name: 'domain-verification', params: {id: response.id}});
-              }
-            })
-          });
+            this.$helper.$saveForm(this, this.fields, {}, SAVE_DOMAIN)
+                .then(({modal, response}) => {
+                  modal.then((result) => {
+                    if (result.isConfirmed) {
+
+                      this.$router.push({name: 'domain-verification', params: {id: response.data.id}});
+                    }
+                  })
+                })
+                .catch(() => {
+
+                });
+          }
+      );
+
     },
     cancel() {
       this.$helper.$resetForm(this.fields, this.$refs);
       this.$router.push({path: '/domain/list'});
     },
-  },
-  beforeMount() {
-    this.$store.dispatch(FETCH_FIELDS, {
-      context: 'add'
-    }).then((fields) => {
-
-      this.fields = fields;
-    });
   },
 });
 
@@ -550,6 +500,7 @@ var Showvue_type_template_id_4089045c_render = function() {
   return _vm.domain
     ? _c("PanelSidebar", {
         attrs: { tabs: _vm.tabs, args: { domain: _vm.domain } },
+        on: { argsChanged: _vm.domainUpdated },
         scopedSlots: _vm._u(
           [
             {
@@ -608,6 +559,8 @@ Showvue_type_template_id_4089045c_render._withStripped = true
 //
 //
 //
+//
+//
 
 
 
@@ -616,6 +569,12 @@ Showvue_type_template_id_4089045c_render._withStripped = true
   data() {
     return {
       domain: null
+    }
+  },
+  methods: {
+    domainUpdated(domain) {
+
+      this.domain = {...this.domain, ...domain};
     }
   },
   mounted() {
@@ -674,11 +633,9 @@ var Listvue_type_template_id_44229af3_render = function() {
   var _c = _vm._self._c || _h
   return _c("PanelDatatable", {
     attrs: {
-      title: _vm.currentRouteTitle(),
       columns: _vm.columns,
-      "query-params": { sort: "created_at", sortBy: "orderBy" },
-      description: _vm.currentRouteDescription(),
-      api: "/pmpr/v1/domain-manager/get-domains"
+      api: "/pmpr/v1/domain-manager/get-domains",
+      "query-params": { sort: "created_at", sortBy: "orderBy" }
     },
     scopedSlots: _vm._u([
       {
@@ -705,10 +662,7 @@ var Listvue_type_template_id_44229af3_render = function() {
                         },
                         [
                           _c("PanelIcon", {
-                            attrs: {
-                              icon: _vm.getIcon(route.meta.icon),
-                              color: "white"
-                            }
+                            attrs: { icon: route.meta.icon, color: "white" }
                           }),
                           _vm._v(
                             "\n        " + _vm._s(route.meta.title) + "\n      "
@@ -765,7 +719,6 @@ Listvue_type_template_id_44229af3_render._withStripped = true
 ;// CONCATENATED MODULE: ./asset/js/panel/view/domain/List.vue?vue&type=template&id=44229af3&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/List.vue?vue&type=script&lang=js&
-//
 //
 //
 //
@@ -852,11 +805,7 @@ var Editvue_type_template_id_7dd2ca17_render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("PanelCardForm", {
-    ref: "edit_new_domain",
-    attrs: {
-      title: _vm.currentRouteTitle(),
-      description: _vm.currentRouteDescription()
-    },
+    attrs: { form: "edit_new_domain" },
     scopedSlots: _vm._u([
       {
         key: "toolbar",
@@ -865,14 +814,8 @@ var Editvue_type_template_id_7dd2ca17_render = function() {
             _c(
               "button",
               {
-                ref: "save_changes",
                 staticClass: "btn btn-success",
-                attrs: { type: "submit" },
-                on: {
-                  click: function($event) {
-                    return _vm.save()
-                  }
-                }
+                attrs: { type: "submit", form: "edit_new_domain" }
               },
               [
                 _vm._v(
@@ -888,60 +831,10 @@ var Editvue_type_template_id_7dd2ca17_render = function() {
         key: "form",
         fn: function() {
           return [
-            _vm._l(_vm.fields, function(field) {
-              return _vm.fields && _vm.domain
-                ? [
-                    field.component === "PanelTextInput"
-                      ? _c("PanelTextInput", {
-                          ref: field.id,
-                          refInFor: true,
-                          attrs: {
-                            attrs: field.attributes,
-                            value: _vm.getValue(field),
-                            desc: field.desc,
-                            label: {
-                              text: field.label,
-                              class: "text-lg-right"
-                            },
-                            size: "lg",
-                            solid: true,
-                            inline: {
-                              input: { lg: 9, xl: 6 },
-                              label: { lg: 3, xl: 3 }
-                            }
-                          },
-                          scopedSlots: _vm._u(
-                            [
-                              field.icon
-                                ? {
-                                    key: "prepend",
-                                    fn: function() {
-                                      return [
-                                        _c(
-                                          "span",
-                                          {
-                                            staticClass: "svg-icon svg-icon-md"
-                                          },
-                                          [
-                                            _c("inline-svg", {
-                                              attrs: { src: field.icon }
-                                            })
-                                          ],
-                                          1
-                                        )
-                                      ]
-                                    },
-                                    proxy: true
-                                  }
-                                : null
-                            ],
-                            null,
-                            true
-                          )
-                        })
-                      : _vm._e()
-                  ]
-                : _c("PanelSpinner")
+            _c("PanelFormInput", {
+              ref: "fields",
+              attrs: { data: _vm.domain, fields: _vm.fields },
+              on: { rendered: _vm.afterRender }
             })
           ]
         },
@@ -974,16 +867,6 @@ Editvue_type_template_id_7dd2ca17_render._withStripped = true
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -995,36 +878,32 @@ Editvue_type_template_id_7dd2ca17_render._withStripped = true
   },
   data() {
     return {
-      fields: null,
+      fields: {},
     };
   },
   methods: {
-    save() {
+    afterRender() {
+      this.$helper.$onSubmitForm(
+          this, 'edit_new_domain', this.fields,
+          () => {
 
-      if (this.$helper.$isFormChanged(this, this.fields, this.domain)) {
+            if (this.$helper.$isFormChanged(this, this.fields, this.domain)) {
 
-        this.$helper.$saveForm(this, this.fields, {
-          id: this.domain.id
-        }, UPDATE_DOMAIN, false)
-            .then(({response, payload}) => {
-              this.$helper.$each(response.changes,(value, key) => {
+              this.$helper.$saveForm(this, this.fields, {
+                id: this.domain.id
+              }, UPDATE_DOMAIN, false)
+                  .then(({response, payload}) => {
 
-                this.domain[key] = value;
-              });
-            });
-      }
-    },
-    getValue(field) {
-      let $value = field.value;
-      if (this.$helper.$isEmpty($value)) {
+                    this.$emit('argsChanged', response.data);
+                  });
+            }
+          }
+      );
 
-        $value = this.domain[field.id];
-      }
-
-      return $value;
     },
   },
   beforeMount() {
+
     this.$store.dispatch(FETCH_FIELDS, {
       context: 'edit',
       id: this.domain.id
@@ -1067,9 +946,7 @@ var Ownershipvue_type_template_id_32ffa132_render = function() {
   var _c = _vm._self._c || _h
   return _c("PanelDatatable", {
     attrs: {
-      description: _vm.currentRouteDescription(),
       api: "/pmpr/v1/domain-manager/get-ownerships",
-      title: _vm.currentRouteTitle(),
       columns: _vm.columns,
       "query-params": { sort: "created_at", sortBy: "orderBy" },
       "query-values": { perPage: 1, domain: this.domain.id }
@@ -1106,8 +983,6 @@ Ownershipvue_type_template_id_32ffa132_render._withStripped = true
 ;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Ownership.vue?vue&type=template&id=32ffa132&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Ownership.vue?vue&type=script&lang=js&
-//
-//
 //
 //
 //
@@ -1180,10 +1055,6 @@ var Verificationvue_type_template_id_0c4d7ca8_render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("PanelCard", {
-    attrs: {
-      title: _vm.currentRouteTitle(),
-      description: _vm.currentRouteDescription()
-    },
     scopedSlots: _vm._u([
       {
         key: "body",
@@ -1246,99 +1117,95 @@ var Verificationvue_type_template_id_0c4d7ca8_render = function() {
                               ]
                             : [
                                 _c(
-                                  "b-alert",
-                                  { attrs: { show: "", variant: "info" } },
+                                  "ol",
+                                  { staticClass: "font-size-h6 pl-5" },
                                   [
-                                    _vm._v(
-                                      _vm._s(
-                                        _vm.translate("verification.notice")
+                                    _c("li", { staticClass: "py-2" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.translate("verification.steps.0")
+                                        ) + ":\n              "
+                                      ),
+                                      _c(
+                                        "button",
+                                        {
+                                          staticClass: "btn btn-default",
+                                          on: { click: _vm.download }
+                                        },
+                                        [
+                                          _c("PanelIcon", {
+                                            attrs: {
+                                              icon: "fontawesome/download.svg",
+                                              size: "sm",
+                                              color: "dark"
+                                            }
+                                          }),
+                                          _vm._v(
+                                            "\n                " +
+                                              _vm._s(_vm.ownership.verify_key) +
+                                              ".html\n              "
+                                          )
+                                        ],
+                                        1
                                       )
-                                    )
-                                  ]
-                                ),
-                                _vm._v(" "),
-                                _c("h4", { staticClass: "mb-5" }, [
-                                  _vm._v(
-                                    "\n            " +
-                                      _vm._s(
-                                        _vm.translate("verification.title")
-                                      ) +
-                                      "\n          "
-                                  )
-                                ]),
-                                _vm._v(" "),
-                                _c("ol", { staticClass: "font-size-h6" }, [
-                                  _c("li", { staticClass: "py-2" }, [
-                                    _vm._v(
-                                      _vm._s(
-                                        _vm.translate("verification.steps.0")
-                                      ) + ":\n              "
-                                    ),
-                                    _c(
-                                      "button",
-                                      {
-                                        staticClass: "btn btn-default",
-                                        on: { click: _vm.download }
-                                      },
-                                      [
-                                        _c("PanelIcon", {
-                                          attrs: {
-                                            icon: _vm.getIcon(
-                                              "fontawesome/download.svg"
-                                            ),
-                                            size: "sm",
-                                            color: "dark"
-                                          }
-                                        }),
-                                        _vm._v(
-                                          "\n                " +
-                                            _vm._s(_vm.ownership.verify_key) +
-                                            ".html\n              "
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("li", {
+                                      staticClass: "py-2",
+                                      domProps: {
+                                        innerHTML: _vm._s(
+                                          _vm.translate(
+                                            "verification.steps.1",
+                                            [_vm.domain.value]
+                                          )
                                         )
-                                      ],
-                                      1
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("li", { staticClass: "py-2" }, [
-                                    _vm._v(
-                                      _vm._s(
-                                        _vm.translate("verification.steps.1")
-                                      ) + ":\n              "
-                                    ),
-                                    _c("span", { staticClass: "text-muted" }, [
-                                      _vm._v(_vm._s(_vm.domain.value))
-                                    ])
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("li", { staticClass: "py-2" }, [
-                                    _vm._v(
-                                      _vm._s(
-                                        _vm.translate("verification.steps.2")
-                                      ) + ":\n              "
-                                    ),
+                                      }
+                                    }),
+                                    _vm._v(" "),
                                     _c(
-                                      "button",
+                                      "b-alert",
                                       {
-                                        ref: "verify",
-                                        staticClass: "btn btn-primary",
-                                        attrs: { role: "button" },
-                                        on: { click: _vm.verify }
+                                        staticClass: "mb-0",
+                                        attrs: { show: "", variant: "warning" }
                                       },
                                       [
                                         _vm._v(
-                                          "\n                " +
-                                            _vm._s(
-                                              _vm.translate(
-                                                "verification.verify"
-                                              )
-                                            ) +
-                                            "\n              "
+                                          _vm._s(
+                                            _vm.translate("verification.notice")
+                                          )
                                         )
                                       ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("li", { staticClass: "py-2" }, [
+                                      _vm._v(
+                                        _vm._s(
+                                          _vm.translate("verification.steps.2")
+                                        )
+                                      )
+                                    ])
+                                  ],
+                                  1
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "button",
+                                  {
+                                    ref: "verify",
+                                    staticClass: "btn btn-primary",
+                                    attrs: { role: "button" },
+                                    on: { click: _vm.verify }
+                                  },
+                                  [
+                                    _vm._v(
+                                      "\n            " +
+                                        _vm._s(
+                                          _vm.translate("verification.verify")
+                                        ) +
+                                        "\n          "
                                     )
-                                  ])
-                                ])
+                                  ]
+                                )
                               ]
                         ]
                       : _c("p", { staticClass: "h6" }, [
@@ -1405,12 +1272,6 @@ Verificationvue_type_template_id_0c4d7ca8_render._withStripped = true
 //
 //
 //
-//
-//
-//
-//
-//
-//
 
 
 
@@ -1435,7 +1296,7 @@ Verificationvue_type_template_id_0c4d7ca8_render._withStripped = true
   methods: {
     download() {
       let key = this.ownership.verify_key;
-      this.$helper.$download(`${key}.html`, key);
+      this.$helper.$download(`${key}.html`, encodeURIComponent(key));
     },
     verify() {
 
