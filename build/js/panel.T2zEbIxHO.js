@@ -169,6 +169,7 @@ PMPRTrigger.addFilter('panel_store_modules', (modules) => {
 }, 40)
 
 /* harmony default export */ const panel_store = ((/* unused pure expression or super */ null && (store)));
+
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/Domain.vue?vue&type=template&id=67fa1eec&
 var render = function() {
   var _vm = this
@@ -1296,6 +1297,7 @@ window.PanelDomainShow = Show;
 window.PanelDomainShowEdit = Edit;
 window.PanelDomainShowOwnership = Ownership;
 window.PanelDomainShowVerification = Verification;
+
 
 
 
