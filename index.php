@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             6225e54902b88             |
+    |             622610002a747             |
     |_______________________________________|
 */
  use Pmpr\Package\DomainManager\DomainManager; DomainManager::symcgieuakksimmu();
