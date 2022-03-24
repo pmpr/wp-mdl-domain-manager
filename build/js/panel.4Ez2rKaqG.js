@@ -713,7 +713,7 @@ Listvue_type_template_id_44229af3_render._withStripped = true
       return {
         name: {
           title: this.translate('column.name'),
-          width: '25%'
+          width: '30%'
         },
         value: {
           title: this.translate('column.url'),
@@ -721,11 +721,11 @@ Listvue_type_template_id_44229af3_render._withStripped = true
         },
         created_at: {
           title: this.translate('column.created_at'),
-          width: '20%'
+          width: '30%'
         },
         actions: {
           title: this.translate('column.actions'),
-          width: '15%'
+          width: '10%'
         }
       }
     },
