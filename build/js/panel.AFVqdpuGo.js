@@ -494,7 +494,10 @@ var Showvue_type_template_id_4089045c_render = function() {
                       "a",
                       {
                         staticClass: "text-primary font-size-h6",
-                        attrs: { href: "https://" + _vm.domain.value }
+                        attrs: {
+                          href: "https://" + _vm.domain.value,
+                          target: "_blank"
+                        }
                       },
                       [_vm._v(_vm._s(_vm.domain.value))]
                     )
@@ -508,7 +511,7 @@ var Showvue_type_template_id_4089045c_render = function() {
           ],
           null,
           false,
-          2503349235
+          3980308065
         )
       })
     : _vm._e()
@@ -520,6 +523,7 @@ Showvue_type_template_id_4089045c_render._withStripped = true
 ;// CONCATENATED MODULE: ./asset/js/panel/view/domain/Show.vue?vue&type=template&id=4089045c&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/Show.vue?vue&type=script&lang=js&
+//
 //
 //
 //
