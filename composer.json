@@ -1,8 +1,8 @@
 {
-  "name": "pmpr-pkg/wp-pkg-domain-manager",
+  "name": "pmpr-mod/wp-mod-domain-manager",
   "type": "project",
   "license": "proprietary",
-  "description": "Domain Manager Package for Wordpress",
+  "description": "Domain Manager Module for Wordpress",
   "keywords": [
     "optimization-manager",
     "wordpress",
@@ -14,7 +14,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Pmpr\\Package\\DomainManager\\": "src/Pmpr/Package/DomainManager"
+      "Pmpr\\Module\\DomainManager\\": "src/Pmpr/Module/DomainManager"
     },
     "files": [
       "index.php"

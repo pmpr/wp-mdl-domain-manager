@@ -4,4 +4,4 @@
     |             62400cad58972             |
     |_______________________________________|
 */
- use Pmpr\Module\DomainManager\DomainManager; DomainManager::symcgieuakksimmu();
+ namespace Pmpr\Module\DomainManager; use Pmpr\Common\Foundation\Container\Container as BaseClass; class Container extends BaseClass { }
