@@ -38,50 +38,35 @@ const getters = {
 const actions = {
     [FETCH_FIELDS]({commit, state}, payload) {
         return new Promise((resolve, reject) => {
-            let $context = payload.context,
-                $fields = state.fields[$context];
 
-            if (this._vm.$helper.$isEmpty($fields)) {
+            this._vm.$api.$get(`${API_PREFIX}/get-domain-fields`, {
+                params: payload
+            }).then((response) => {
 
-                this._vm.$api.$get(`${API_PREFIX}/get-domain-fields`, {
-                    params: payload
-                }).then((response) => {
-
-                    commit(SET_FIELDS, {
-                        fields: response.data,
-                        context: $context
-                    });
-                    resolve(response.data);
-                }).catch(({response}) => {
-
-                    reject(response);
+                commit(SET_FIELDS, {
+                    fields: response.data,
+                    context: payload.context
                 });
-            } else {
+                resolve(response.data);
+            }).catch(({response}) => {
 
-                resolve($fields);
-            }
+                reject(response);
+            });
         });
     },
     [FETCH_VALID_TABS]({commit, state}, payload) {
         return new Promise((resolve, reject) => {
-            let $tabs = state.tabs;
 
-            if (this._vm.$helper.$isEmpty($tabs)) {
+            this._vm.$api.$get(`${API_PREFIX}/get-domain-tabs`, {
+                params: payload
+            }).then((response) => {
 
-                this._vm.$api.$get(`${API_PREFIX}/get-domain-tabs`, {
-                    params: payload
-                }).then((response) => {
+                commit(SET_TABS, response.data);
+                resolve(response.data);
+            }).catch(({response}) => {
 
-                    commit(SET_TABS, response.data);
-                    resolve(response.data);
-                }).catch(({response}) => {
-
-                    reject(response);
-                });
-            } else {
-
-                resolve($tabs);
-            }
+                reject(response);
+            });
         });
     },
     [FETCH_DOMAIN]({commit, state}, payload) {
