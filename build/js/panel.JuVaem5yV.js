@@ -155,8 +155,8 @@ PMPRTrigger.addFilter('panel_store_modules', (modules) => {
 
 /* harmony default export */ const panel_store = ((/* unused pure expression or super */ null && (store)));
 
-;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/Domain.vue?vue&type=template&id=67fa1eec&
-var render = function() {
+;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/Domain.vue?vue&type=template&id=b3dacc8e&
+var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -171,7 +171,7 @@ var staticRenderFns = []
 render._withStripped = true
 
 
-;// CONCATENATED MODULE: ./asset/js/panel/view/Domain.vue?vue&type=template&id=67fa1eec&
+;// CONCATENATED MODULE: ./asset/js/panel/view/Domain.vue?vue&type=template&id=b3dacc8e&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/Domain.vue?vue&type=script&lang=js&
 //
@@ -194,20 +194,19 @@ render._withStripped = true
 // This module is a runtime utility for cleaner component module output and will
 // be included in the final webpack user bundle.
 
-function normalizeComponent (
+function normalizeComponent(
   scriptExports,
   render,
   staticRenderFns,
   functionalTemplate,
   injectStyles,
   scopeId,
-  moduleIdentifier, /* server only */
+  moduleIdentifier /* server only */,
   shadowMode /* vue-cli only */
 ) {
   // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
+  var options =
+    typeof scriptExports === 'function' ? scriptExports.options : scriptExports
 
   // render functions
   if (render) {
@@ -227,7 +226,8 @@ function normalizeComponent (
   }
 
   var hook
-  if (moduleIdentifier) { // server build
+  if (moduleIdentifier) {
+    // server build
     hook = function (context) {
       // 2.3 injection
       context =
@@ -253,11 +253,11 @@ function normalizeComponent (
   } else if (injectStyles) {
     hook = shadowMode
       ? function () {
-        injectStyles.call(
-          this,
-          (options.functional ? this.parent : this).$root.$options.shadowRoot
-        )
-      }
+          injectStyles.call(
+            this,
+            (options.functional ? this.parent : this).$root.$options.shadowRoot
+          )
+        }
       : injectStyles
   }
 
@@ -268,16 +268,14 @@ function normalizeComponent (
       options._injectStyles = hook
       // register for functional component in vue file
       var originalRender = options.render
-      options.render = function renderWithStyleInjection (h, context) {
+      options.render = function renderWithStyleInjection(h, context) {
         hook.call(context)
         return originalRender(h, context)
       }
     } else {
       // inject component registration as beforeCreate hook
       var existing = options.beforeCreate
-      options.beforeCreate = existing
-        ? [].concat(existing, hook)
-        : [hook]
+      options.beforeCreate = existing ? [].concat(existing, hook) : [hook]
     }
   }
 
@@ -306,12 +304,9 @@ var component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var api; }
-component.options.__file = "asset/js/panel/view/Domain.vue"
 /* harmony default export */ const Domain = (component.exports);
-;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/Add.vue?vue&type=template&id=68cc1f48&
-var Addvue_type_template_id_68cc1f48_render = function() {
+;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/Add.vue?vue&type=template&id=7a8cc56f&
+var Addvue_type_template_id_7a8cc56f_render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -320,50 +315,50 @@ var Addvue_type_template_id_68cc1f48_render = function() {
     scopedSlots: _vm._u([
       {
         key: "form",
-        fn: function() {
+        fn: function () {
           return [
             _c("PanelForm", {
               attrs: { fields: _vm.fields },
               on: {
                 rendered: _vm.afterRender,
-                changed: function(values) {
+                changed: function (values) {
                   _vm.data = values
-                }
-              }
-            })
+                },
+              },
+            }),
           ]
         },
-        proxy: true
+        proxy: true,
       },
       {
         key: "action",
-        fn: function() {
+        fn: function () {
           return [
             _c("panelActionSubmit", {
               staticClass: "mr-5",
-              attrs: { name: "save" }
+              attrs: { name: "save" },
             }),
             _vm._v(" "),
             _c("panelActionCancel", {
               attrs: { name: "save", type: "reset" },
               nativeOn: {
-                click: function($event) {
+                click: function ($event) {
                   return _vm.cancel()
-                }
-              }
-            })
+                },
+              },
+            }),
           ]
         },
-        proxy: true
-      }
-    ])
+        proxy: true,
+      },
+    ]),
   })
 }
-var Addvue_type_template_id_68cc1f48_staticRenderFns = []
-Addvue_type_template_id_68cc1f48_render._withStripped = true
+var Addvue_type_template_id_7a8cc56f_staticRenderFns = []
+Addvue_type_template_id_7a8cc56f_render._withStripped = true
 
 
-;// CONCATENATED MODULE: ./asset/js/panel/view/domain/Add.vue?vue&type=template&id=68cc1f48&
+;// CONCATENATED MODULE: ./asset/js/panel/view/domain/Add.vue?vue&type=template&id=7a8cc56f&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/Add.vue?vue&type=script&lang=js&
 //
@@ -437,8 +432,8 @@ Addvue_type_template_id_68cc1f48_render._withStripped = true
 ;
 var Add_component = normalizeComponent(
   domain_Addvue_type_script_lang_js_,
-  Addvue_type_template_id_68cc1f48_render,
-  Addvue_type_template_id_68cc1f48_staticRenderFns,
+  Addvue_type_template_id_7a8cc56f_render,
+  Addvue_type_template_id_7a8cc56f_staticRenderFns,
   false,
   null,
   null,
@@ -446,12 +441,9 @@ var Add_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Add_api; }
-Add_component.options.__file = "asset/js/panel/view/domain/Add.vue"
 /* harmony default export */ const Add = (Add_component.exports);
-;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/Show.vue?vue&type=template&id=4089045c&
-var Showvue_type_template_id_4089045c_render = function() {
+;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/Show.vue?vue&type=template&id=1af6fe1b&
+var Showvue_type_template_id_1af6fe1b_render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -463,13 +455,13 @@ var Showvue_type_template_id_4089045c_render = function() {
           [
             {
               key: "before_tabs",
-              fn: function() {
+              fn: function () {
                 return [
                   _c(
                     "div",
                     {
                       staticClass:
-                        "font-weight-bolder font-size-h5 text-dark-75 text-hover-primary"
+                        "font-weight-bolder font-size-h5 text-dark-75 text-hover-primary",
                     },
                     [_vm._v(_vm._s(_vm.domain.name))]
                   ),
@@ -481,31 +473,31 @@ var Showvue_type_template_id_4089045c_render = function() {
                         staticClass: "text-primary font-size-h6",
                         attrs: {
                           href: "https://" + _vm.domain.value,
-                          target: "_blank"
-                        }
+                          target: "_blank",
+                        },
                       },
                       [_vm._v(_vm._s(_vm.domain.value))]
-                    )
+                    ),
                   ]),
                   _vm._v(" "),
-                  _c("hr")
+                  _c("hr"),
                 ]
               },
-              proxy: true
-            }
+              proxy: true,
+            },
           ],
           null,
           false,
           3980308065
-        )
+        ),
       })
     : _vm._e()
 }
-var Showvue_type_template_id_4089045c_staticRenderFns = []
-Showvue_type_template_id_4089045c_render._withStripped = true
+var Showvue_type_template_id_1af6fe1b_staticRenderFns = []
+Showvue_type_template_id_1af6fe1b_render._withStripped = true
 
 
-;// CONCATENATED MODULE: ./asset/js/panel/view/domain/Show.vue?vue&type=template&id=4089045c&
+;// CONCATENATED MODULE: ./asset/js/panel/view/domain/Show.vue?vue&type=template&id=1af6fe1b&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/Show.vue?vue&type=script&lang=js&
 //
@@ -573,8 +565,8 @@ Showvue_type_template_id_4089045c_render._withStripped = true
 ;
 var Show_component = normalizeComponent(
   domain_Showvue_type_script_lang_js_,
-  Showvue_type_template_id_4089045c_render,
-  Showvue_type_template_id_4089045c_staticRenderFns,
+  Showvue_type_template_id_1af6fe1b_render,
+  Showvue_type_template_id_1af6fe1b_staticRenderFns,
   false,
   null,
   null,
@@ -582,12 +574,9 @@ var Show_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Show_api; }
-Show_component.options.__file = "asset/js/panel/view/domain/Show.vue"
 /* harmony default export */ const Show = (Show_component.exports);
-;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/List.vue?vue&type=template&id=44229af3&
-var Listvue_type_template_id_44229af3_render = function() {
+;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/List.vue?vue&type=template&id=6f8b038b&
+var Listvue_type_template_id_6f8b038b_render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -596,14 +585,14 @@ var Listvue_type_template_id_44229af3_render = function() {
     scopedSlots: _vm._u([
       {
         key: "toolbar",
-        fn: function() {
+        fn: function () {
           return [
             _c("router-link", {
               attrs: { to: { name: "panel_domain_add" }, custom: "" },
               scopedSlots: _vm._u([
                 {
                   key: "default",
-                  fn: function(ref) {
+                  fn: function (ref) {
                     var href = ref.href
                     var route = ref.route
                     var navigate = ref.navigate
@@ -615,21 +604,21 @@ var Listvue_type_template_id_44229af3_render = function() {
                           href: href,
                           text: route.meta.title,
                           variant: "success",
-                          light: false
-                        }
-                      })
+                          light: false,
+                        },
+                      }),
                     ]
-                  }
-                }
-              ])
-            })
+                  },
+                },
+              ]),
+            }),
           ]
         },
-        proxy: true
+        proxy: true,
       },
       {
         key: "td",
-        fn: function(ref) {
+        fn: function (ref) {
           var item = ref.item
           var column = ref.column
           var column_key = ref.column_key
@@ -641,28 +630,28 @@ var Listvue_type_template_id_44229af3_render = function() {
                     text: item[column_key],
                     target: "_blank",
                     link: "https://" + item[column_key],
-                    container: { class: "direction-ltr" }
-                  }
+                    container: { class: "direction-ltr" },
+                  },
                 })
               : column_key === "actions"
               ? _c("PanelActionLink", {
                   attrs: {
                     name: "details",
-                    to: { name: "panel_domain_show", params: { id: id } }
-                  }
+                    to: { name: "panel_domain_show", params: { id: id } },
+                  },
                 })
-              : _c("PanelCellText", { attrs: { text: item[column_key] } })
+              : _c("PanelCellText", { attrs: { text: item[column_key] } }),
           ]
-        }
-      }
-    ])
+        },
+      },
+    ]),
   })
 }
-var Listvue_type_template_id_44229af3_staticRenderFns = []
-Listvue_type_template_id_44229af3_render._withStripped = true
+var Listvue_type_template_id_6f8b038b_staticRenderFns = []
+Listvue_type_template_id_6f8b038b_render._withStripped = true
 
 
-;// CONCATENATED MODULE: ./asset/js/panel/view/domain/List.vue?vue&type=template&id=44229af3&
+;// CONCATENATED MODULE: ./asset/js/panel/view/domain/List.vue?vue&type=template&id=6f8b038b&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/List.vue?vue&type=script&lang=js&
 //
@@ -733,8 +722,8 @@ Listvue_type_template_id_44229af3_render._withStripped = true
 ;
 var List_component = normalizeComponent(
   domain_Listvue_type_script_lang_js_,
-  Listvue_type_template_id_44229af3_render,
-  Listvue_type_template_id_44229af3_staticRenderFns,
+  Listvue_type_template_id_6f8b038b_render,
+  Listvue_type_template_id_6f8b038b_staticRenderFns,
   false,
   null,
   null,
@@ -742,12 +731,9 @@ var List_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var List_api; }
-List_component.options.__file = "asset/js/panel/view/domain/List.vue"
 /* harmony default export */ const List = (List_component.exports);
-;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Edit.vue?vue&type=template&id=7dd2ca17&
-var Editvue_type_template_id_7dd2ca17_render = function() {
+;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Edit.vue?vue&type=template&id=e753b080&
+var Editvue_type_template_id_e753b080_render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -756,36 +742,36 @@ var Editvue_type_template_id_7dd2ca17_render = function() {
     scopedSlots: _vm._u([
       {
         key: "form",
-        fn: function() {
+        fn: function () {
           return [
             _c("PanelForm", {
               attrs: { data: _vm.domain, fields: _vm.fields },
               on: {
                 rendered: _vm.afterRender,
-                changed: function(values) {
+                changed: function (values) {
                   _vm.data = Object.assign({}, _vm.data, values)
-                }
-              }
-            })
+                },
+              },
+            }),
           ]
         },
-        proxy: true
+        proxy: true,
       },
       {
         key: "action",
-        fn: function() {
+        fn: function () {
           return [_c("panelActionSubmit", { attrs: { name: "save" } })]
         },
-        proxy: true
-      }
-    ])
+        proxy: true,
+      },
+    ]),
   })
 }
-var Editvue_type_template_id_7dd2ca17_staticRenderFns = []
-Editvue_type_template_id_7dd2ca17_render._withStripped = true
+var Editvue_type_template_id_e753b080_staticRenderFns = []
+Editvue_type_template_id_e753b080_render._withStripped = true
 
 
-;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Edit.vue?vue&type=template&id=7dd2ca17&
+;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Edit.vue?vue&type=template&id=e753b080&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Edit.vue?vue&type=script&lang=js&
 //
@@ -862,8 +848,8 @@ Editvue_type_template_id_7dd2ca17_render._withStripped = true
 ;
 var Edit_component = normalizeComponent(
   show_Editvue_type_script_lang_js_,
-  Editvue_type_template_id_7dd2ca17_render,
-  Editvue_type_template_id_7dd2ca17_staticRenderFns,
+  Editvue_type_template_id_e753b080_render,
+  Editvue_type_template_id_e753b080_staticRenderFns,
   false,
   null,
   null,
@@ -871,12 +857,9 @@ var Edit_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Edit_api; }
-Edit_component.options.__file = "asset/js/panel/view/domain/show/Edit.vue"
 /* harmony default export */ const Edit = (Edit_component.exports);
-;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Ownership.vue?vue&type=template&id=32ffa132&
-var Ownershipvue_type_template_id_32ffa132_render = function() {
+;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Ownership.vue?vue&type=template&id=d3bd265a&
+var Ownershipvue_type_template_id_d3bd265a_render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -885,7 +868,7 @@ var Ownershipvue_type_template_id_32ffa132_render = function() {
     scopedSlots: _vm._u([
       {
         key: "td",
-        fn: function(ref) {
+        fn: function (ref) {
           var item = ref.item
           var column = ref.column
           var column_key = ref.column_key
@@ -900,22 +883,22 @@ var Ownershipvue_type_template_id_32ffa132_render = function() {
                     statuses: {
                       owner: "success",
                       unverified: "danger",
-                      restrict: "primary"
-                    }
-                  }
+                      restrict: "primary",
+                    },
+                  },
                 })
-              : _c("PanelCellText", { attrs: { text: item[column_key] } })
+              : _c("PanelCellText", { attrs: { text: item[column_key] } }),
           ]
-        }
-      }
-    ])
+        },
+      },
+    ]),
   })
 }
-var Ownershipvue_type_template_id_32ffa132_staticRenderFns = []
-Ownershipvue_type_template_id_32ffa132_render._withStripped = true
+var Ownershipvue_type_template_id_d3bd265a_staticRenderFns = []
+Ownershipvue_type_template_id_d3bd265a_render._withStripped = true
 
 
-;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Ownership.vue?vue&type=template&id=32ffa132&
+;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Ownership.vue?vue&type=template&id=d3bd265a&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Ownership.vue?vue&type=script&lang=js&
 //
@@ -977,8 +960,8 @@ Ownershipvue_type_template_id_32ffa132_render._withStripped = true
 ;
 var Ownership_component = normalizeComponent(
   show_Ownershipvue_type_script_lang_js_,
-  Ownershipvue_type_template_id_32ffa132_render,
-  Ownershipvue_type_template_id_32ffa132_staticRenderFns,
+  Ownershipvue_type_template_id_d3bd265a_render,
+  Ownershipvue_type_template_id_d3bd265a_staticRenderFns,
   false,
   null,
   null,
@@ -986,12 +969,9 @@ var Ownership_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Ownership_api; }
-Ownership_component.options.__file = "asset/js/panel/view/domain/show/Ownership.vue"
 /* harmony default export */ const Ownership = (Ownership_component.exports);
-;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Verification.vue?vue&type=template&id=0c4d7ca8&
-var Verificationvue_type_template_id_0c4d7ca8_render = function() {
+;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Verification.vue?vue&type=template&id=bc934ad2&
+var Verificationvue_type_template_id_bc934ad2_render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -999,7 +979,7 @@ var Verificationvue_type_template_id_0c4d7ca8_render = function() {
     scopedSlots: _vm._u([
       {
         key: "body",
-        fn: function() {
+        fn: function () {
           return [
             _vm.loaded
               ? _c(
@@ -1017,10 +997,10 @@ var Verificationvue_type_template_id_0c4d7ca8_render = function() {
                                       "verification.verified",
                                       [
                                         _vm.ownership.user,
-                                        _vm.ownership.verify_date
+                                        _vm.ownership.verify_date,
                                       ]
-                                    )
-                                  }
+                                    ),
+                                  },
                                 }),
                                 _vm._v(" "),
                                 _c("br"),
@@ -1031,21 +1011,21 @@ var Verificationvue_type_template_id_0c4d7ca8_render = function() {
                                       attrs: {
                                         class:
                                           "form-control direction-ltr disabled",
-                                        disabled: "disabled"
+                                        disabled: "disabled",
                                       },
                                       label: {
                                         text: _vm.translate(
                                           "verification.api_key"
-                                        )
+                                        ),
                                       },
                                       ref: "api_key",
                                       name: "api_key",
                                       size: "lg",
                                       solid: true,
-                                      value: _vm.domain.api_key
-                                    }
-                                  }
-                                })
+                                      value: _vm.domain.api_key,
+                                    },
+                                  },
+                                }),
                               ]
                             : [
                                 _c(
@@ -1062,24 +1042,24 @@ var Verificationvue_type_template_id_0c4d7ca8_render = function() {
                                         "button",
                                         {
                                           staticClass: "btn btn-default",
-                                          on: { click: _vm.download }
+                                          on: { click: _vm.download },
                                         },
                                         [
                                           _c("PanelIcon", {
                                             attrs: {
                                               icon: "fontawesome/download.svg",
                                               size: "sm",
-                                              color: "dark"
-                                            }
+                                              color: "dark",
+                                            },
                                           }),
                                           _vm._v(
                                             "\n                " +
                                               _vm._s(_vm.ownership.verify_key) +
                                               ".html\n              "
-                                          )
+                                          ),
                                         ],
                                         1
-                                      )
+                                      ),
                                     ]),
                                     _vm._v(" "),
                                     _c("li", {
@@ -1090,8 +1070,8 @@ var Verificationvue_type_template_id_0c4d7ca8_render = function() {
                                             "verification.steps.1",
                                             [_vm.domain.value]
                                           )
-                                        )
-                                      }
+                                        ),
+                                      },
                                     }),
                                     _vm._v(" "),
                                     _c("PanelNotice", {
@@ -1100,8 +1080,8 @@ var Verificationvue_type_template_id_0c4d7ca8_render = function() {
                                         content: _vm.translate(
                                           "verification.notice"
                                         ),
-                                        classes: "my-3"
-                                      }
+                                        classes: "my-3",
+                                      },
                                     }),
                                     _vm._v(" "),
                                     _c("li", { staticClass: "py-2" }, [
@@ -1109,8 +1089,8 @@ var Verificationvue_type_template_id_0c4d7ca8_render = function() {
                                         _vm._s(
                                           _vm.translate("verification.steps.2")
                                         )
-                                      )
-                                    ])
+                                      ),
+                                    ]),
                                   ],
                                   1
                                 ),
@@ -1118,39 +1098,39 @@ var Verificationvue_type_template_id_0c4d7ca8_render = function() {
                                 _c("PanelActionSubmit", {
                                   attrs: {
                                     text: _vm.translate("verification.verify"),
-                                    id: "verify"
+                                    id: "verify",
                                   },
                                   nativeOn: {
-                                    click: function($event) {
+                                    click: function ($event) {
                                       return _vm.verify.apply(null, arguments)
-                                    }
-                                  }
-                                })
-                              ]
+                                    },
+                                  },
+                                }),
+                              ],
                         ]
                       : _c("p", { staticClass: "h6" }, [
                           _vm._v(
                             _vm._s(
                               _vm.translate("verification.permission_denied")
                             )
-                          )
-                        ])
+                          ),
+                        ]),
                   ],
                   2
                 )
-              : _c("PanelSpinner")
+              : _c("PanelSpinner"),
           ]
         },
-        proxy: true
-      }
-    ])
+        proxy: true,
+      },
+    ]),
   })
 }
-var Verificationvue_type_template_id_0c4d7ca8_staticRenderFns = []
-Verificationvue_type_template_id_0c4d7ca8_render._withStripped = true
+var Verificationvue_type_template_id_bc934ad2_staticRenderFns = []
+Verificationvue_type_template_id_bc934ad2_render._withStripped = true
 
 
-;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Verification.vue?vue&type=template&id=0c4d7ca8&
+;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Verification.vue?vue&type=template&id=bc934ad2&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Verification.vue?vue&type=script&lang=js&
 //
@@ -1255,8 +1235,8 @@ Verificationvue_type_template_id_0c4d7ca8_render._withStripped = true
 ;
 var Verification_component = normalizeComponent(
   show_Verificationvue_type_script_lang_js_,
-  Verificationvue_type_template_id_0c4d7ca8_render,
-  Verificationvue_type_template_id_0c4d7ca8_staticRenderFns,
+  Verificationvue_type_template_id_bc934ad2_render,
+  Verificationvue_type_template_id_bc934ad2_staticRenderFns,
   false,
   null,
   null,
@@ -1264,9 +1244,6 @@ var Verification_component = normalizeComponent(
   
 )
 
-/* hot reload */
-if (false) { var Verification_api; }
-Verification_component.options.__file = "asset/js/panel/view/domain/show/Verification.vue"
 /* harmony default export */ const Verification = (Verification_component.exports);
 ;// CONCATENATED MODULE: ./asset/js/panel/index.js
 
