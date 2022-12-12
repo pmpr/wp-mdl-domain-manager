@@ -970,8 +970,8 @@ var Ownership_component = normalizeComponent(
 )
 
 /* harmony default export */ const Ownership = (Ownership_component.exports);
-;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Verification.vue?vue&type=template&id=bc934ad2&
-var Verificationvue_type_template_id_bc934ad2_render = function () {
+;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Verification.vue?vue&type=template&id=7b628afe&
+var Verificationvue_type_template_id_7b628afe_render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -1047,7 +1047,7 @@ var Verificationvue_type_template_id_bc934ad2_render = function () {
                                         [
                                           _c("PanelIcon", {
                                             attrs: {
-                                              icon: "fontawesome/download.svg",
+                                              icon: "fasm/6/set/download.svg",
                                               size: "sm",
                                               color: "dark",
                                             },
@@ -1126,11 +1126,11 @@ var Verificationvue_type_template_id_bc934ad2_render = function () {
     ]),
   })
 }
-var Verificationvue_type_template_id_bc934ad2_staticRenderFns = []
-Verificationvue_type_template_id_bc934ad2_render._withStripped = true
+var Verificationvue_type_template_id_7b628afe_staticRenderFns = []
+Verificationvue_type_template_id_7b628afe_render._withStripped = true
 
 
-;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Verification.vue?vue&type=template&id=bc934ad2&
+;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Verification.vue?vue&type=template&id=7b628afe&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Verification.vue?vue&type=script&lang=js&
 //
@@ -1235,8 +1235,8 @@ Verificationvue_type_template_id_bc934ad2_render._withStripped = true
 ;
 var Verification_component = normalizeComponent(
   show_Verificationvue_type_script_lang_js_,
-  Verificationvue_type_template_id_bc934ad2_render,
-  Verificationvue_type_template_id_bc934ad2_staticRenderFns,
+  Verificationvue_type_template_id_7b628afe_render,
+  Verificationvue_type_template_id_7b628afe_staticRenderFns,
   false,
   null,
   null,
