@@ -1,7 +1,7 @@
 <?php
 /*   _______________________________________
     |  Obfuscated by PMPR - Php Obfuscator  |
-    |             65195c98ab9a9             |
+    |             654a139b61604             |
     |_______________________________________|
 */
- namespace Pmpr\Module\DomainManager\Model; use Pmpr\Module\DomainManager\Container; class Model extends Container { public function __construct() { parent::__construct(); $this->iemaakgqgqosiecm(); } public function iemaakgqgqosiecm() { Domain::symcgieuakksimmu(); Ownership::symcgieuakksimmu(); } }
+ namespace Pmpr\Module\DomainManager\Model; use Pmpr\Module\DomainManager\Container; class Model extends Container { public function mameiwsayuyquoeq() { Domain::symcgieuakksimmu(); Ownership::symcgieuakksimmu(); } }
