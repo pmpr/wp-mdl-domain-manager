@@ -9,11 +9,11 @@
     "package"
   ],
   "require": {
-    "php": ">=7.4",
+    "php": ">=8.3",
     "pmpr-cmn/wp-cmn-foundation": "~1.4"
   },
   "prod-require": {
-    "php": "7.4",
+    "php": "8.3",
     "wordpress": "6.0",
     "wp-cmn-foundation": "latest"
   },
@@ -26,5 +26,5 @@
     ]
   },
   "minimum-stability": "dev",
-  "tag": "1.1.30"
+  "tag": "1.1.32"
 }
