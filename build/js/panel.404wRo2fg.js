@@ -148,7 +148,7 @@ const mutations = {
 
 const store = {state, actions, mutations, getters};
 
-PMPRTrigger.addFilter('panel_store_modules', (modules) => {
+PRHelper.getHook().addFilter('panel_store_modules', (modules) => {
     modules['domain-manager'] = store;
     return modules;
 }, 40)
