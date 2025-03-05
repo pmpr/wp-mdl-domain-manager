@@ -305,8 +305,8 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ const Domain = (component.exports);
-;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/Add.vue?vue&type=template&id=7a8cc56f&
-var Addvue_type_template_id_7a8cc56f_render = function () {
+;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/Add.vue?vue&type=template&id=04f029ba&
+var Addvue_type_template_id_04f029ba_render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -317,13 +317,15 @@ var Addvue_type_template_id_7a8cc56f_render = function () {
         key: "form",
         fn: function () {
           return [
-            _c("PanelForm", {
+            _c("PanelFields", {
               attrs: { fields: _vm.fields },
-              on: {
-                rendered: _vm.afterRender,
-                changed: function (values) {
-                  _vm.data = values
+              on: { rendered: _vm.afterRender },
+              model: {
+                value: _vm.data,
+                callback: function ($$v) {
+                  _vm.data = $$v
                 },
+                expression: "data",
               },
             }),
           ]
@@ -354,13 +356,17 @@ var Addvue_type_template_id_7a8cc56f_render = function () {
     ]),
   })
 }
-var Addvue_type_template_id_7a8cc56f_staticRenderFns = []
-Addvue_type_template_id_7a8cc56f_render._withStripped = true
+var Addvue_type_template_id_04f029ba_staticRenderFns = []
+Addvue_type_template_id_04f029ba_render._withStripped = true
 
 
-;// CONCATENATED MODULE: ./asset/js/panel/view/domain/Add.vue?vue&type=template&id=7a8cc56f&
+;// CONCATENATED MODULE: ./asset/js/panel/view/domain/Add.vue?vue&type=template&id=04f029ba&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/Add.vue?vue&type=script&lang=js&
+//
+//
+//
+//
 //
 //
 //
@@ -432,8 +438,8 @@ Addvue_type_template_id_7a8cc56f_render._withStripped = true
 ;
 var Add_component = normalizeComponent(
   domain_Addvue_type_script_lang_js_,
-  Addvue_type_template_id_7a8cc56f_render,
-  Addvue_type_template_id_7a8cc56f_staticRenderFns,
+  Addvue_type_template_id_04f029ba_render,
+  Addvue_type_template_id_04f029ba_staticRenderFns,
   false,
   null,
   null,
@@ -732,8 +738,8 @@ var List_component = normalizeComponent(
 )
 
 /* harmony default export */ const List = (List_component.exports);
-;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Edit.vue?vue&type=template&id=e753b080&
-var Editvue_type_template_id_e753b080_render = function () {
+;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Edit.vue?vue&type=template&id=407ed485&
+var Editvue_type_template_id_407ed485_render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
@@ -744,13 +750,15 @@ var Editvue_type_template_id_e753b080_render = function () {
         key: "form",
         fn: function () {
           return [
-            _c("PanelForm", {
-              attrs: { data: _vm.domain, fields: _vm.fields },
-              on: {
-                rendered: _vm.afterRender,
-                changed: function (values) {
-                  _vm.data = Object.assign({}, _vm.data, values)
+            _c("PanelFields", {
+              attrs: { fields: _vm.fields, "init-values": _vm.domain },
+              on: { rendered: _vm.afterRender },
+              model: {
+                value: _vm.data,
+                callback: function ($$v) {
+                  _vm.data = $$v
                 },
+                expression: "data",
               },
             }),
           ]
@@ -760,20 +768,23 @@ var Editvue_type_template_id_e753b080_render = function () {
       {
         key: "action",
         fn: function () {
-          return [_c("panelActionSubmit", { attrs: { name: "save" } })]
+          return [_c("PanelActionSubmit", { attrs: { name: "save" } })]
         },
         proxy: true,
       },
     ]),
   })
 }
-var Editvue_type_template_id_e753b080_staticRenderFns = []
-Editvue_type_template_id_e753b080_render._withStripped = true
+var Editvue_type_template_id_407ed485_staticRenderFns = []
+Editvue_type_template_id_407ed485_render._withStripped = true
 
 
-;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Edit.vue?vue&type=template&id=e753b080&
+;// CONCATENATED MODULE: ./asset/js/panel/view/domain/show/Edit.vue?vue&type=template&id=407ed485&
 
 ;// CONCATENATED MODULE: ../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./asset/js/panel/view/domain/show/Edit.vue?vue&type=script&lang=js&
+//
+//
+//
 //
 //
 //
@@ -848,8 +859,8 @@ Editvue_type_template_id_e753b080_render._withStripped = true
 ;
 var Edit_component = normalizeComponent(
   show_Editvue_type_script_lang_js_,
-  Editvue_type_template_id_e753b080_render,
-  Editvue_type_template_id_e753b080_staticRenderFns,
+  Editvue_type_template_id_407ed485_render,
+  Editvue_type_template_id_407ed485_staticRenderFns,
   false,
   null,
   null,
